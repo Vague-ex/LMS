@@ -1,0 +1,233 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf0f5;
+    overflow-x: hidden;
+}
+
+/* Top Navigation Bar */
+.bg-orange {
+    background-color: #e08e0b !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0;
+    background-color: #222d32 !important;
+    overflow-y: auto;
+}
+
+.sidebar .nav-link {
+    color: #b8c7ce;
+    padding: 12px 20px;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: #1a2226;
+    border-left-color: #3c8dbc;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* User Profile in Sidebar */
+.user-profile {
+    padding: 15px;
+}
+
+.user-avatar {
+    margin-bottom: 10px;
+}
+
+/* Main Content Area */
+main {
+    margin-top: 56px;
+    padding-top: 20px;
+}
+
+/* Statistics Cards - Large */
+.stat-card {
+    border: none;
+    border-radius: 8px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card .stat-icon {
+    opacity: 0.3;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card-cyan {
+    background: linear-gradient(135deg, #00c0ef 0%, #0099cc 100%);
+}
+
+.card-green {
+    background: linear-gradient(135deg, #00a65a 0%, #008d4c 100%);
+}
+
+.card-orange {
+    background: linear-gradient(135deg, #f39c12 0%, #e08e0b 100%);
+}
+
+.card-red {
+    background: linear-gradient(135deg, #dd4b39 0%, #c23321 100%);
+}
+
+/* Small Statistics Cards */
+.small-stat-card {
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.small-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.small-stat-card .icon-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.card-red-light {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.text-cyan {
+    color: #00c0ef !important;
+}
+
+/* Button Styles */
+.btn-light {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-weight: 500;
+}
+
+.btn-light:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        top: 0;
+        height: auto;
+    }
+    
+    main {
+        margin-top: 0;
+    }
+    
+    .stat-card .stat-icon {
+        font-size: 2rem !important;
+    }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card,
+.small-stat-card {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Scrollbar Styling for Sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #1a2226;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #3c8dbc;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #5fa7d1;
+}
+
+/* Card Body Padding */
+.stat-card .card-body {
+    padding: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.small-stat-card .card-body {
+    padding: 20px;
+}
+
+/* Display Numbers */
+.display-4 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Badge Styling */
+.badge {
+    padding: 5px 10px;
+    font-weight: 500;
+}
