@@ -5,6 +5,15 @@ if (!$dbconnect) {
     die("Couldn't connect to MySQL database. Error: " . mysqli_connect_error());
 }
 
-/* recommended: set charset to avoid encoding issues */
+
 mysqli_set_charset($dbconnect, 'utf8mb4');
+
+function executeQuery($sql) {
+    global $dbconnect;
+    $result = mysqli_query($dbconnect, $sql);
+    if (!$result) {
+        die("Query failed: " . mysqli_error($dbconnect));
+    }
+    return $result;
+}
 ?>
