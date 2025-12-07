@@ -1,5 +1,5 @@
 
-```markdown
+```
 # Library Management System (LMS)
 
 **Author:** Trix Justin A. Aguilar  
@@ -10,8 +10,8 @@
 
 ## Overview
 This Library Management System (LMS) is a school project thing
-- **Frontend:** Bootstrap (for responsive UI)
-- **Backend:** PHP (running on XAMPP’s Apache server)
+- **Frontend:** Bootstrap 
+- **Backend:** PHP (XAMPP’s Apache server)
 - **Database:** MySQL (via phpMyAdmin)
 
 The system is designed for **admin-only use**. where crud (Create, Read, Update, Delete) functionality for managing **Books**, **Members**, and **Borrow Records** are apllied.  
