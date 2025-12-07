@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $action = $_POST['action'];
         
         if ($action === 'add') {
-            // map and sanitize inputs (names match schema: firstname, middlename, lastname, contact, email)
+            
             $firstname = mysqli_real_escape_string($dbconnect, trim($_POST['firstname'] ?? ''));
             $lastname  = mysqli_real_escape_string($dbconnect, trim($_POST['lastname'] ?? ''));
             $middlename_raw = trim($_POST['middlename'] ?? '');
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $contact   = mysqli_real_escape_string($dbconnect, trim($_POST['contact'] ?? ''));
             $email     = mysqli_real_escape_string($dbconnect, trim($_POST['email'] ?? ''));
 
-            // middlename is now optional - process only if provided
+            
             $middlename = '';
             if (!empty($middlename_raw)) {
                 $mi_clean = preg_replace('/[^A-Za-z]/', '', $middlename_raw);
@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php if (isset($_GET['msg'])): ?>
             <div class="alert alert-success alert-dismissible fade show">
                 <?php
-                // simple user-friendly messages
+                
                 $msgs = [
                   'added'=>'added',
                   'updated'=>'updated',
@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <!-- Add/Edit Form -->
+        <!-- for editing/adding -->
         <?php if (isset($_GET['action']) && ($_GET['action'] === 'add' || $_GET['action'] === 'edit')): 
             $member = ['firstname' => '', 'lastname' => '', 'middlename' => '', 'email' => '', 'contact' => ''];
             $action = $_GET['action'];

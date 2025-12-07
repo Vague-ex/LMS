@@ -1,7 +1,6 @@
 <?php
 require_once 'Includes/db.php';
 
-// Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['action'])) {
         $action = $_POST['action'];
@@ -42,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         elseif ($action === 'delete') {
             $book_id = intval($_POST['book_id']);
             
-            // Check if book is currently borrowed
+            
             $check_sql = "SELECT COUNT(*) as count FROM borrow_records WHERE book_id = $book_id AND return_date IS NULL";
             $check_result = executeQuery($check_sql);
             $check_row = mysqli_fetch_assoc($check_result);
@@ -118,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         <?php endif; ?>
 
-        <!-- Add/Edit Form -->
+        <!-- for editing/adding -->
         <?php if (isset($_GET['action']) && ($_GET['action'] === 'add' || $_GET['action'] === 'edit')): 
             $book = ['title' => '', 'author' => '', 'publisher' => '', 'year' => date('Y'), 'category' => '', 'status' => 'Available'];
             $action = $_GET['action'];
