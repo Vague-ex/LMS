@@ -1,18 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css" integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW" crossorigin="anonymous">
-
     <style>
-      .bg-brown { background-color: #6f4e37 !important; }
-      .text-on-brown { color: #ffffff !important; }
+      .bg-brown { background-color: #6f4e37; }
+      .text-on-brown { color: #ffffff; }
       .navbar-dark .navbar-brand,
-      .navbar-dark .nav-link { color: #fff !important; }
+      .navbar-dark .nav-link { color: #fff; }
     </style>
 
     <title>LMS Aguilar</title>
@@ -47,7 +43,7 @@
     <main class="container my-4 flex-grow-1">
       <div class="p-5 bg-body rounded-3">
         <h1 class="display-6">Welcome to EIS Aguilar</h1>
-        <p class="lead">Your learning management system.</p>
+        <p class="lead">Library Management System.</p>
       </div>
     </main>
 
