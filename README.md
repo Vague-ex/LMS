@@ -1,5 +1,5 @@
 
-```
+
 # Library Management System (LMS)
 
 **Author:** Trix Justin A. Aguilar  
