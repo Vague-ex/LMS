@@ -20,7 +20,7 @@ The system is designed for **admin-only use**. where crud (Create, Read, Update,
 
 ## Project Structure
 
-
+```
 LMS Project/
 │
 ├── css/                # bootstrap css
@@ -35,6 +35,7 @@ LMS Project/
 ├── members.php         # crud for members
 ├── borrow.php          # crud for borrow records
 └── README.md           # readme
+```
 
 
 ---
